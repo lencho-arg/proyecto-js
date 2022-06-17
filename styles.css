@@ -1,0 +1,12 @@
+.mapa {
+    width: 500px;
+    height: 400px;
+}
+
+@media screen and (max-width:992px){
+    .mapa{
+        width: 400px;
+        height: 400px;
+    }
+    
+}

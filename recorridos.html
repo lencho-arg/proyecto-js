@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUSCHOICE - RECORRIDOS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="estilos.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body class="bg-black" id="newFondo">
+
+    <header class="container-fluid bg-dark text-light text-center">
+
+        <div class="row">            
+
+                <button class="btn btn-black" id="fondo"><h1 class="text-white animate__animated animate__bounceInRight">BUSCHOICE</h1></button>
+            
+        </div>
+
+    </header>
+
+    <main class="container bg-dark">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 bg-dark text-white">
+                    <div>
+                        <h2 class="text-center pt-5">RECORRIDOS</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit nemo esse provident officia ullam sed impedit architecto velit possimus est vero nihil iusto dicta rerum soluta recusandae, optio eos nulla repellat? Quia modi molestiae atque cupiditate, ullam consequatur. Distinctio itaque autem consequatur facilis consequuntur sint hic labore, quasi, ab optio dignissimos.</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 pb-5">
+
+                            <div class="dropdown" id="wey">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                                  Elija la Zona
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                                  <li><a class="dropdown-item active" id="oeste" href="#">Zona Oeste</a></li>
+                                  <li><a class="dropdown-item" id="este" href="#">Zona Este</a></li>
+                                  <li><a class="dropdown-item" id="norte" href="#">Zona Norte</a></li>
+                                  <li><a class="dropdown-item" id="sur" href="#">Zona Sur</a></li>
+                                  <li><hr class="dropdown-divider"></li>
+                                  <li><a class="dropdown-item" href="#">Seguir Recorrido</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-6">
+
+                            <p>
+                                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+                                  Información adicional
+                                </button>
+                            </p>
+                            <div style="min-height: 120px;">
+                            <div class="collapse collapse-horizontal" id="collapseWidthExample">
+                                <div class="card card-body text-black" style="width: 300px;">
+                                This is some placeholder content for a horizontal collapse. It's hidden by default and shown when triggered.
+                                </div>
+                            </div>
+                            </div>
+
+                        </div>
+                         
+                    </div>
+                </div>
+
+                    <!--Google map-->
+
+                <div class="col-md-6 p-4">
+
+                    <!-- <div class="mapa"> -->
+
+                        <iframe src="https://maps.google.com/maps?q=buenosaires&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" class="mapa" allowfullscreen loading="lazy" id="mapa" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                   
+                    <!-- </div> -->
+      
+                </div>
+                
+                    <!--Google Maps-->
+            </div>
+    
+          </div>
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer class="container pt-4">
+        <div class="row">
+            
+            <div class="col-md-12 text-white text-center">
+                <p>CREADO CON <img src="./images/amor.png" alt=""> DESDE BUENOS AIRES ARGENTINA <img src="./images/argentina.png" alt=""> TODOS LOS DERECHOS RESERVADOS <img src="./images/copyright.png" alt="" class="bg-dark"></p>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="./scripts/recorridos.js"  type="module"></script>
+
+</body>
+</html>
