@@ -6,6 +6,10 @@ document.addEventListener('DOMContentLoaded', function(){
     let valUsuario = document.getElementById('nameVal')
     let valPass = document.getElementById('passVal')
     let boton1 = document.getElementById('formSubmit')
+    let clearBtn = document.getElementById('borrar')
+
+    let stringStorage = JSON.parse(localStorage.getItem('usuarioRegistrado'))
+
 
     function laCard(){
     boton1 = document.createElement('div')
@@ -27,8 +31,6 @@ document.addEventListener('DOMContentLoaded', function(){
             let nuevoUsuario = (formulario[0].value)
             let nuevaContrasena = (formulario[1].value)
 
-            let usersLocalStorage = JSON.parse(localStorage.getItem('usuarioRegistrado'))
-
 
             valUsuario.innerHTML = ((formulario[0].value||'vacio')==='vacio')?'el nombre no puede estar vacio':''
             valPass.innerHTML = ((formulario[1].value||'vacio')==='vacio')?'el pass no puede estar vacio':''
@@ -44,10 +46,14 @@ document.addEventListener('DOMContentLoaded', function(){
     
                 localStorage.setItem('usuarioRegistrado', JSON.stringify(nuevoUsuario))
 
-                usersLocalStorage = JSON.parse(localStorage.getItem('usuarioRegistrado'))
+                stringStorage = JSON.parse(localStorage.getItem('usuarioRegistrado'))
 
+                // let nuevoUser = JSON.parse(stringStorage)
 
+                console.log(stringStorage)
                 laCard()
+
+                
                 
 
             }else if(nuevaContrasena === ''){
@@ -57,6 +63,12 @@ document.addEventListener('DOMContentLoaded', function(){
             }
         })
 
+        clearBtn.addEventListener('click',()=>{
+            localStorage.clear()
+            stringStorage = false
+            console.log('Se limpio el LocalStorage')
+        })
+
         // boton1.addEventListener('click',()=>{
         //     if(usersLocalStorage){
         //         console.log(usersLocalStorage)
@@ -64,5 +76,8 @@ document.addEventListener('DOMContentLoaded', function(){
         //         console.log('El localStorage esta vacio')
         //     }
         // })
+
+
+        
     
 })
