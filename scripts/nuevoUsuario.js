@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     function laCard(){
     boton1 = document.createElement('div')
-    boton1.innerHTML = '<div class="card text-center mt-5"><div class="card-header fw-semibold">Felicitaciones</div><div class="card-body text-white bg-dark"><h5 class="card-title">Bienvenido a BUSCHOICE</h5><p class="card-text">Contamos con el mejor soporte para que veas tus recorridos de micros empresariales.</p><a href="../recorridos.html" class="btn btn-primary">Ir a los Recorridos</a></div><div class="card-footer text-muted text-white fw-semibold">Muchas Gracias</div></div>'
+    boton1.innerHTML = '<div class="card text-center mt-5"><div class="card-header fw-semibold">Felicitaciones</div><div class="card-body text-white bg-dark"><h5 class="card-title">Bienvenido a BUSCHOICE</h5><p class="card-text">Contamos con el mejor soporte para que veas tus recorridos de micros empresariales.</p><a href="./recorridos.html" class="btn btn-primary">Ir a los Recorridos</a></div><div class="card-footer text-muted text-white fw-semibold">Muchas Gracias</div></div>'
     
     document.getElementById('btnEnviando').append(boton1)
 
