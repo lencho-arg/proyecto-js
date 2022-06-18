@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function(){
     let valPass = document.getElementById('passVal')
     let boton1 = document.getElementById('formSubmit')
     let clearBtn = document.getElementById('borrar')
+    let showBtn = document.getElementById('mostrar')
 
     let stringStorage = JSON.parse(localStorage.getItem('usuarioRegistrado'))
 
@@ -69,13 +70,13 @@ document.addEventListener('DOMContentLoaded', function(){
             console.log('Se limpio el LocalStorage')
         })
 
-        // boton1.addEventListener('click',()=>{
-        //     if(usersLocalStorage){
-        //         console.log(usersLocalStorage)
-        //     }else if(!usersLocalStorage){
-        //         console.log('El localStorage esta vacio')
-        //     }
-        // })
+        showBtn.addEventListener('click',()=>{
+            if(stringStorage){
+                console.log(stringStorage)
+            }else if(!stringStorage){
+                console.log('El localStorage esta vacio')
+            }
+        })
 
 
         
