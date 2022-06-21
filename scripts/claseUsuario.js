@@ -2,6 +2,7 @@ export class User{
     constructor(user,pass){
         this.user=user
         this.pass=pass
+        this.new=[]
     }
     validar(usuario, contrasena){
         return (this.user == usuario && this.pass == contrasena)
@@ -10,3 +11,4 @@ export class User{
         return `Bienvenido ${this.user}`
     }
 }
+

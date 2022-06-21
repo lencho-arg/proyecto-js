@@ -36,22 +36,20 @@ document.addEventListener('DOMContentLoaded', function(){
             if(validacion){
                 // alert('Bienvenido')
                 localStorage.setItem('usuarioRegistrado', JSON.stringify(usuarioEncontrado))
-                
-
-                // QUERIA QUE SE EJECUTE UNA CARD LUEGO DE VALIDAR EL USUARIO, PARA QUE ELIJA LA ZONA QUE VA A REALIZAR Y LUEGO EL RECORRIDO, O ME CONVIENE HACER UN LINK A OTRO HTML?
-
+                window.location.href="./recorridos.html"
 
                 // const enviar = ()=>{
-                    boton1 = document.createElement('div')
-                    boton1.innerHTML = '<div class="card text-center mt-5"><div class="card-header fw-semibold">Bienvenido</div><div class="card-body text-white bg-dark"><h5 class="card-title">BUSCHOICE</h5><p class="card-text">Sigamos viajando.</p><a href="../recorridos.html" class="btn btn-primary">Ir a los Recorridos</a></div></div>'
+
+
+                    // boton1 = document.createElement('div')
+                    // boton1.innerHTML = '<div class="card text-center mt-5"><div class="card-header fw-semibold">Bienvenido</div><div class="card-body text-white bg-dark"><h5 class="card-title">BUSCHOICE</h5><p class="card-text">Sigamos viajando.</p><a href="../recorridos.html" class="btn btn-primary">Ir a los Recorridos</a></div></div>'
                     
-                    document.getElementById('btnEnviando').append(boton1)
+                    // document.getElementById('btnEnviando').append(boton1)
+
                 // }
+
                 // boton1.addEventListener('mouseover',enviar)
-
-                
-
-            
+      
             }else{
                 alert('Usuario y Contraseña Incorrectos')
             }

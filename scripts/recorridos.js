@@ -1,30 +1,3 @@
-//PREGUNTAR LA ZONA
-
-// let salir 
-
-// let entrada = prompt ("Que zona realizara " + "\n oeste \n este \n norte \n sur")
-
-// if (entrada != "oeste" && entrada != "este" && entrada != "norte" && entrada != "sur"){
-//     do {
-//         alert("No ingreso zona")
-//         entrada = prompt ("Ingresa nuevamente la zona que realizara " + "\n oeste \n este \n norte \n sur")
-
-//     }while (entrada != "oeste" && entrada != "este" && entrada != "norte" && entrada != "sur")
-
-// }
-// if (entrada == "oeste"){
-//         alert("Ingresando a zona oeste")
-// }   else if (entrada == "este"){
-//         alert("Ingresando a zona este")
-// }   else if (entrada == "norte"){
-//         alert("Ingresando a zona norte")
-// }   else if (entrada == "sur"){
-//         alert("Ingresando a zona sur")
-// }
-
-
-// salir = prompt ("Salir?")
-
 let botonOeste = document.getElementById('oeste')
 
 botonOeste.addEventListener('click',(e)=>{
@@ -88,20 +61,6 @@ botonSur.addEventListener('click',(e)=>{
 
 
 
-
-// (document.getElementById('formID')[0].value)
-
-// let continuar = confirm ("Desea continuar? \nPresione 'Aceptar' para continuar o 'Cancelar' para salir")
-
-// if(continuar == true){
-//         salir = 'no'
-//         continue
-// }else if (continuar == false){
-//         salir = 'si'
-// }while 
-
-
-
 // NUEVO MEN 
 
 
@@ -120,3 +79,139 @@ botonSur.addEventListener('click',(e)=>{
 // 36 55 señor
 // edadEnString='mayor'
 
+
+
+let empresas=[
+        {usu:'Lencina', empresa:'Aerolineas', antiguedad:11},
+        {usu:'Pizzini', empresa:'Open English', antiguedad:2}
+]
+
+let job = empresas.find(e => e.empresa==='Aerolineas');
+
+console.log(job)
+
+ 
+const destructurar = (item) => {
+        const [{usu,antiguedad}] = item
+        console.log(usu, antiguedad)
+}
+
+destructurar (empresas)
+
+
+
+const zonas = [
+        {
+                zonaOeste: 'Moron',
+                empresa: 'Aerolineas',
+                autobus: {
+                        numero: 45,
+                        chofer: 'Raul'
+                }
+        },
+        {
+                zonaEste: 'Congreso',
+                empresa:'Nortur'
+        },
+        {
+                zonaNorte: 'Tigre',
+                empresa: 'Aerolineas'
+        }
+]
+
+const [{zonaOeste, autobus:{numero, chofer}}] = zonas
+console.log(numero,chofer)
+
+let saber = zonas.filter(zona =>{
+        return zona.empresa==='Aerolineas' 
+})
+
+console.table(saber)
+
+
+
+const conocer = [
+        {nombre:'Moron', zona:'Oeste', autobus:{
+                number: 64,
+                conductor: 'Miguel',
+                empresa:'Nortur'
+        }},
+        {nombre:'Castelar', zona:'Oeste', autobus:{
+                number: 23,
+                conductor: 'Jose',
+                empresa:'Nortur'
+        }},
+        {nombre:'Ituzaingo', zona:'Oeste', autobus:{
+                number: 79,
+                conductor: 'Raul',
+                empresa:'Tienda Leon'
+        }},
+        {nombre:'Constitucion', zona:'Este', autobus:{
+                number: 17,
+                conductor: 'Diego',
+                empresa:'Argenbus'
+        }},
+        {nombre:'Congreso', zona:'Este', autobus:{
+                number: 8,
+                conductor: 'Andres',
+                empresa:'Nortur'
+        }},
+        {nombre:'Tigre', zona:'Norte', autobus:{
+                number: 36,
+                conductor: 'Alberto',
+                empresa:'Argenbus'
+        }},
+        {nombre:'Olivos', zona:'Norte', autobus:{
+                number: 91,
+                conductor: 'Francisco',
+                empresa:'Tienda Leon'
+        }},
+        {nombre:'Quilmes', zona:'Sur', autobus:{
+                number: 3,
+                conductor: 'Federico',
+                empresa:'Nortur'
+        }},
+        {nombre:'Wilde', zona:'Sur', autobus:{
+                number: 33,
+                conductor: 'Emiliano',
+                empresa:'Tienda Leon'
+        }},
+]
+
+// let recorrido = conocer.filter(x=>x.zona === 'Oeste')
+// console.log(recorrido)
+
+// const [{nombre,autobus:{number,conductor,empresa}}] = conocer
+// console.log(nombre)
+// console.log(number,conductor,empresa)
+
+// const destru = (item) => {
+//         const [{nombre,autobus:{conductor}}] = item
+//         console.log(nombre, conductor)
+// }
+
+// destru(conocer)
+
+
+let ingreso = prompt ("Que zona realizara " + "\n oeste \n este \n norte \n sur")
+
+const [a,b,c,d,e,f,g,h,i] = conocer
+
+if(ingreso === 'oeste'){
+        console.table(a,b,c)
+}else if(ingreso === 'este'){
+        console.table(d,e);
+}else if(ingreso === 'norte'){
+        console.table(f,g)
+}else if(ingreso === 'sur'){
+        console.table(h,i)
+}
+
+
+
+const conocer1 = [...conocer]
+console.table(conocer1)
+
+// const nombresObj = {...conocer}
+
+// console.log(nombresObj)
