@@ -60,27 +60,6 @@ botonSur.addEventListener('click',(e)=>{
 
 
 
-
-// NUEVO MEN 
-
-
-// let zona = prompt('que zona elije');
-
-// (zona === 'moron')?alert('aguante el gallo') :alert('puto gil')
-
-// edad = 21
-// let puedeTomar = (edad >=21)?'si puede':'que se vaya a casa no puede'
-// console.log(puedeTomar)
-
-// let edadEnString
-// (num<=17)?edadEnString = 'menor':
-// (num>=18 && num<2)?edadEnString = 'joven':
-// 26 35 adulto
-// 36 55 señor
-// edadEnString='mayor'
-
-
-
 let empresas=[
         {usu:'Lencina', empresa:'Aerolineas', antiguedad:11},
         {usu:'Pizzini', empresa:'Open English', antiguedad:2}
@@ -193,6 +172,10 @@ const conocer = [
 // destru(conocer)
 
 
+
+
+
+
 let ingreso = prompt ("Que zona realizara " + "\n oeste \n este \n norte \n sur")
 
 const [a,b,c,d,e,f,g,h,i] = conocer
@@ -215,3 +198,28 @@ console.table(conocer1)
 // const nombresObj = {...conocer}
 
 // console.log(nombresObj)
+
+
+const formArticle = document.getElementById("formID")
+const posts = []
+
+
+class Post {
+        constructor(contenido){
+                this.contenido=contenido
+        }
+}
+
+let postsLocalStorage = JSON.parse(localStorage.getItem('posts'))
+
+
+formArticle.addEventListener('input', (e)=>{
+        e.preventDefault()
+        const article = (formArticle[0].value)
+        const newArticle = new Post(article)
+        posts.push(newArticle)
+        localStorage.setItem('posts', JSON.stringify(posts))
+        postsLocalStorage = JSON.parse(localStorage.getItem('posts'))
+})
+
+
