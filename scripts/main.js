@@ -2,18 +2,30 @@ import * as datos from './modeloDatos.js'
 
 document.addEventListener('DOMContentLoaded', function(){
 
-
-    // NO SE QUE PUEDO CREAR PARA QUE MI FONDO O BACKGROUND CAMBIE DE COLOR
-
     let cambiarBg = document.getElementById('fondo')
+    let color = ['black','linear-gradient(45deg, #6ea7fd, #69018f)'];
 
-    const darkMode = ()=>{
-        let cambiarBg = document.createElement('div')
-        cambiarBg.innerHTML = '<button class="btn btn-dark">DARK MODE</button>'
-        document.getElementById('newFondo').append(cambiarBg)
+    function btnChanger(){
+        let random = Math.floor(Math.random()*color.length)
+        let cambiarBg = document.getElementById('container1').style.background = color[random]
     }
 
-    cambiarBg.addEventListener('click',darkMode)
+    cambiarBg.addEventListener("click",()=>{
+        btnChanger()
+
+        Swal.fire({
+            icon: 'success',
+            title: 'Cambiaste el fondo',
+            showConfirmButton: false,
+            timer: 1500
+        })
+
+        // Toastify({
+        //     text: "Click para ingresar",
+        //     duration: 3000,
+        //     destination: window.location.href="./recorridos.html"
+        // }).showToast();
+    })
 
     let boton1 = document.getElementById('formSubmit')
     
@@ -36,6 +48,14 @@ document.addEventListener('DOMContentLoaded', function(){
             if(validacion){
                 // alert('Bienvenido')
                 localStorage.setItem('usuarioRegistrado', JSON.stringify(usuarioEncontrado))
+
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Cambiaste el fondo',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+                
                 window.location.href="./recorridos.html"
 
                 // const enviar = ()=>{
