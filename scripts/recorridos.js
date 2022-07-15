@@ -3,12 +3,10 @@ let botonOeste = document.getElementById('oeste')
 botonOeste.addEventListener('click',(e)=>{
         e.preventDefault()
 
-        // const userNuevo = ()=>{
         botonOeste = document.createElement('div')
         botonOeste.innerHTML = '<div class="card text-center mt-5"><div class="card-header text-black fw-semibold">Zona Oeste</div><div class="card-body text-white bg-dark"><h5 class="card-title">Que recorrido buscas?</h5><p class="card-text">KM-18 - RAMOS MEJIA - MORENO - CASTELAR.</p><a href="../recorridos.html" class="btn btn-primary">Ver Mapa</a></div><div class="card-footer text-muted text-white fw-semibold">Muchas Gracias</div></div>'
         
         document.getElementById('wey').append(botonOeste)
-        // botonOeste.addEventListener('click',userNuevo)
 
         
 })
@@ -18,12 +16,10 @@ let botonEste = document.getElementById('este')
 botonEste.addEventListener('click',(e)=>{
         e.preventDefault()
 
-        // const userNuevo = ()=>{
         botonEste = document.createElement('div')
         botonEste.innerHTML = '<div class="card text-center mt-5"><div class="card-header text-black fw-semibold">Zona Este</div><div class="card-body text-white bg-dark"><h5 class="card-title">Que recorrido buscas?</h5><p class="card-text">KM-18 - RAMOS MEJIA - MORENO - CASTELAR.</p><a href="../recorridos.html" class="btn btn-primary">Ver Mapa</a></div><div class="card-footer text-muted text-white fw-semibold">Muchas Gracias</div></div>'
         
         document.getElementById('wey').append(botonEste)
-        // botonOeste.addEventListener('click',userNuevo)
 
         
 })
@@ -33,12 +29,10 @@ let botonNorte = document.getElementById('norte')
 botonNorte.addEventListener('click',(e)=>{
         e.preventDefault()
 
-        // const userNuevo = ()=>{
         botonNorte = document.createElement('div')
         botonNorte.innerHTML = '<div class="card text-center mt-5"><div class="card-header text-black fw-semibold">Zona Norte</div><div class="card-body text-white bg-dark"><h5 class="card-title">Que recorrido buscas?</h5><p class="card-text">KM-18 - RAMOS MEJIA - MORENO - CASTELAR.</p><a href="../recorridos.html" class="btn btn-primary">Ver Mapa</a></div><div class="card-footer text-muted text-white fw-semibold">Muchas Gracias</div></div>'
         
         document.getElementById('wey').append(botonNorte)
-        // botonOeste.addEventListener('click',userNuevo)
 
         
 })
@@ -48,16 +42,48 @@ let botonSur = document.getElementById('sur')
 botonSur.addEventListener('click',(e)=>{
         e.preventDefault()
 
-        // const userNuevo = ()=>{
         botonSur = document.createElement('div')
         botonSur.innerHTML = '<div class="card text-center mt-5"><div class="card-header text-black fw-semibold">Zona Sur</div><div class="card-body text-white bg-dark"><h5 class="card-title">Que recorrido buscas?</h5><p class="card-text">KM-18 - RAMOS MEJIA - MORENO - CASTELAR.</p><a href="../recorridos.html" class="btn btn-primary">Ver Mapa</a></div><div class="card-footer text-muted text-white fw-semibold">Muchas Gracias</div></div>'
         
         document.getElementById('wey').append(botonSur)
-        // botonOeste.addEventListener('click',userNuevo)
 
         
 })
 
+let videoInt = document.getElementById('videoInteractivo')
+
+videoInt.addEventListener('click',(e)=>{
+        e.preventDefault()
+
+        videoInt = document.createElement('div')
+        videoInt.innerHTML = '<div><video src="/images/TravelBoast_2022-07-12_14-31-22.mp4" class="video flex" autoplay alt=""></div>'
+        
+        document.getElementById('video').append(videoInt)
+
+        
+})
+
+
+// // FETCH
+
+const lista = document.getElementById('dalemen')
+fetch('data.json')
+.then((resp)=>resp.json())
+.then((data)=>{
+        data.forEach((producto) => {
+                const li = document.createElement('div')
+                li.innerHTML = `
+                <h4>${producto.nombre}</h4>
+                <li>${producto.zona}</li>
+                <li>Autobus número: ${producto.autobus.number}</li>
+                <li>Conductor: ${producto.autobus.conductor}</li>
+                <li>Empresa: ${producto.autobus.empresa}</li>
+
+                <hr/>
+                `
+                lista.append(li)
+        })
+})
 
 
 let empresas=[
@@ -157,26 +183,7 @@ const conocer = [
         }},
 ]
 
-// let recorrido = conocer.filter(x=>x.zona === 'Oeste')
-// console.log(recorrido)
-
-// const [{nombre,autobus:{number,conductor,empresa}}] = conocer
-// console.log(nombre)
-// console.log(number,conductor,empresa)
-
-// const destru = (item) => {
-//         const [{nombre,autobus:{conductor}}] = item
-//         console.log(nombre, conductor)
-// }
-
-// destru(conocer)
-
-
-
-
-
-
-let ingreso = prompt ("Que zona realizara " + "\n oeste \n este \n norte \n sur")
+let ingreso = ('este')
 
 const [a,b,c,d,e,f,g,h,i] = conocer
 
@@ -191,35 +198,25 @@ if(ingreso === 'oeste'){
 }
 
 
-
 const conocer1 = [...conocer]
 console.table(conocer1)
 
-// const nombresObj = {...conocer}
-
-// console.log(nombresObj)
 
 
-const formArticle = document.getElementById("formID")
-const posts = []
+let recorrido = conocer.filter(x=>x.zona === 'Oeste')
+console.log(recorrido)
 
+const [{nombre,autobus:{number,conductor,empresa}}] = conocer
+console.log(nombre)
+console.log(number,conductor,empresa)
 
-class Post {
-        constructor(contenido){
-                this.contenido=contenido
-        }
+const destru = (item) => {
+        const [{nombre,autobus:{conductor}}] = item
+        console.log(nombre, conductor)
 }
 
-let postsLocalStorage = JSON.parse(localStorage.getItem('posts'))
+destru(conocer)
 
 
-formArticle.addEventListener('input', (e)=>{
-        e.preventDefault()
-        const article = (formArticle[0].value)
-        const newArticle = new Post(article)
-        posts.push(newArticle)
-        localStorage.setItem('posts', JSON.stringify(posts))
-        postsLocalStorage = JSON.parse(localStorage.getItem('posts'))
-})
 
 

@@ -1,0 +1,47 @@
+[
+    {"nombre":"Moron", "zona":"Oeste", "autobus":{
+        "number": "64",
+        "conductor": "Miguel",
+        "empresa":"Nortur"
+    }},
+    {"nombre":"Castelar", "zona":"Oeste", "autobus":{
+        "number": "23",
+        "conductor": "Jose",
+        "empresa":"Nortur"
+}},
+{"nombre":"Ituzaingo", "zona":"Oeste", "autobus":{
+    "number": "79",
+    "conductor": "Raul",
+    "empresa":"Tienda Leon"
+}},
+{"nombre":"Constitucion", "zona":"Este", "autobus":{
+    "number": "17",
+    "conductor": "Diego",
+    "empresa":"Argenbus"
+}},
+{"nombre":"Congreso", "zona":"Este", "autobus":{
+    "number": "8",
+    "conductor": "Andres",
+    "empresa":"Nortur"
+}},
+{"nombre":"Tigre", "zona":"Norte", "autobus":{
+    "number": "36",
+    "conductor": "Alberto",
+    "empresa":"Argenbus"
+}},
+{"nombre":"Olivos", "zona":"Norte", "autobus":{
+    "number": "91",
+    "conductor": "Francisco",
+    "empresa":"Tienda Leon"
+}},
+{"nombre":"Quilmes", "zona":"Sur", "autobus":{
+    "number": 3,
+    "conductor": "Federico",
+    "empresa":"Nortur"
+}},
+{"nombre":"Wilde", "zona":"Sur", "autobus":{
+        "number": 33,
+        "conductor": "Emiliano",
+        "empresa":"Tienda Leon"
+}}
+]

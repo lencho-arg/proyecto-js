@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BUSCHOICE - RECORRIDOS</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="estilos.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="styles.css">
 
 </head>
 <body class="bg-black" id="newFondo">
+
+    <div id="container2" class="changeBG">
+
 
     <header class="container-fluid bg-dark text-light text-center">
 
@@ -26,41 +28,28 @@
     <main class="container bg-dark">
 
         <div class="container">
+
             <div class="row">
-                <div class="col-md-6 bg-dark text-white">
+
+                <div class="col-md-6 bg-dark text-white" id="dalemen">
+
                     <div>
+
                         <h2 class="text-center pt-5">RECORRIDOS</h2>
-                        <!-- <form action="" id="formID">
-                            <div class="row mb-3">
-                                <label for="textArticle" class="sr-only">Publish post</label>
-                                <textarea id="textArticle" rows="8"
-                                    class="block px-0 w-full text-sm text-gray-800 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
-                                    placeholder="Escribe un articulo." required></textarea>
-                            </div>
-                            <button type="submit"
-                            id="btnSubmit"
-                            class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800">
-                            Publicar
-                            </button>
-                        </form> -->
 
-                        <input placeholder="Elegi el lugar" list="leng" name="listaLenguajes">
+                        <p>Somos los encargados de brindarte la Información de cada recorrido de los autobuses que pasa por tu zona, determinando a que tipo de empresa estas trabajando, junto con un mapa interactivo para que visualices el recorrido en si.</p>
 
-                        <datalist id="leng">
-                            <option id="oeste" value="Oeste"></option>
-                            <option value="Este"></option>
-                            <option value="Norte"></option>
-                            <option value="Sur"></option>
-                        </datalist>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit nemo esse provident officia ullam sed impedit architecto velit possimus est vero nihil iusto dicta rerum soluta recusandae, optio eos nulla repellat? Quia modi molestiae atque cupiditate, ullam consequatur. Distinctio itaque autem consequatur facilis consequuntur sint hic labore, quasi, ab optio dignissimos.</p>
                     </div>
+
                     <div class="row">
+
                         <div class="col-md-6 pb-5">
 
                             <div class="dropdown" id="wey">
                                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
                                   Elija la Zona
                                 </button>
+
                                 <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
                                   <li><a class="dropdown-item active" id="oeste" href="#">Zona Oeste</a></li>
                                   <li><a class="dropdown-item" id="este" href="#">Zona Este</a></li>
@@ -69,46 +58,58 @@
                                   <li><hr class="dropdown-divider"></li>
                                   <li><a class="dropdown-item" href="#">Seguir Recorrido</a></li>
                                 </ul>
+
                             </div>
 
                         </div>
 
-                        <div class="col-md-6">
-
-                            <p>
-                                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
-                                  Información adicional
-                                </button>
-                            </p>
-                            <div style="min-height: 120px;">
-                            <div class="collapse collapse-horizontal" id="collapseWidthExample">
-                                <div class="card card-body text-black" style="width: 300px;">
-                                This is some placeholder content for a horizontal collapse. It's hidden by default and shown when triggered.
-                                </div>
-                            </div>
-                            </div>
-
-                        </div>
+                        
                          
                     </div>
+
                 </div>
 
-                    <!--Google map-->
 
                 <div class="col-md-6 p-4">
 
-                    <!-- <div class="mapa"> -->
+                    <!--Google map-->
+                    <div class="mapa"> -->
 
-                        <!-- <iframe src="https://maps.google.com/maps?q=buenosaires&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" class="mapa" allowfullscreen loading="lazy" id="mapa" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
-                   
-                    <!-- </div> -->
-      
+                        <iframe src="https://maps.google.com/maps?q=buenosaires&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" class="mapa" allowfullscreen loading="lazy" id="mapa" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    
+                    </div>
+                    <!--Google Maps-->
+
+                    
+                    <div class="col-md-4 mt-5">
+
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+                            Información adicional
+                        </button>
+                    
+
+                        <div style="min-height: 120px;">
+
+                            <div class="collapse collapse-horizontal" id="collapseWidthExample">
+                                <div class="card card-body text-black text-center" style="width: 300px;" id="video">
+                                    Haciendo click aqui se puede visualizar video interactivo.
+                                    <button class="btn btn-dark mt-2" id="videoInteractivo">Ver video del recorrido</button>
+                                </div>
+
+                            </div>
+                            
+                        </div>
+
+                    </div>
+
+
                 </div>
                 
-                    <!--Google Maps-->
+
             </div>
     
-          </div>
+        </div>
+
     </main>
 
     <!-- FOOTER -->
@@ -123,8 +124,10 @@
 
     </footer>
 
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <script src="./scripts/recorridos.js"  type="module"></script>
+    <script src="/scripts/recorridos.js"  type="module"></script>
 
 </body>
 </html>

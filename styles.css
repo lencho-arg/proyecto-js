@@ -12,6 +12,14 @@
     background: linear-gradient(45deg, #6ea7fd, #69018f);
 }
 
+#container2 {
+    height: 265vh;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    background: linear-gradient(45deg, #6ea7fd, #69018f);
+}
+
 #btn-color{
     background-color: #0471d6;
     color: white;
@@ -31,6 +39,20 @@
 
 @media screen and (max-width:992px){
     .mapa{
+        width: 400px;
+        height: 400px;
+    }
+    
+}
+
+.video {
+    width: 600px;
+    height: 500px;
+    
+}
+
+@media screen and (max-width:992px){
+    .video{
         width: 400px;
         height: 400px;
     }
